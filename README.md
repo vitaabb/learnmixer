@@ -1,4 +1,18 @@
 # learnmixer
 HCI project team is working here
 
-Using Android SDK, developing for a tablet.
+Roles
+  Umair: chief developer
+	Vita: developer ()
+	Lutfu: developer
+  Yang: designer
+	Kensuke: coordinator
+
+Target platform - Android (tablet)
+
+Technology - Axure(mock up) -> Android studio(developing)
+
+Milestones(development plan)	https://github.com/slavaUkraini/learnmixer/milestones
+
+Tasks		https://github.com/slavaUkraini/learnmixer/issues?q=is%3Aopen+is%3Aissue
+
