@@ -1,12 +1,7 @@
 # learnmixer
 HCI project team is working here
 
-Roles
-  Umair: chief developer
-	Vita: developer ()
-	Lutfu: developer
-  Yang: designer
-	Kensuke: coordinator
+Roles - Umair: lead developer, Vita: developer, Lutfu: developer, Yang: designer, Kensuke: coordinator
 
 Target platform - Android (tablet)
 
