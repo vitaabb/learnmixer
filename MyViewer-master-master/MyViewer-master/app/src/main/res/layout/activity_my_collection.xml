@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.kvitochka.myviewer.MyCollection"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:id="@+id/jiji"
+    android:background="@color/bright_foreground_material_dark">
+    <!--
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#ff511156"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout"
+            android:weightSum="1">
+
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Learnmixer"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="26dp"
+                android:textColor="#ffffffff"
+                android:textIsSelectable="false"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:layout_weight="0.88" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Hello, Vita!"
+                android:id="@+id/textView3"
+                android:clickable="true"
+                android:textColor="#ffffffff"
+                android:textStyle="bold" />
+        </LinearLayout> -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:context="com.kvitochka.viewer.MyCollection"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:id="@+id/jh">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/arrow_back"
+                />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Chapter 2.2"
+
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/linearLayout"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/text"
+                android:layout_below="@+id/textView2"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chapter 2.3"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/linearLayout"
+            />
+
+
+        <VideoView
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:id="@+id/videoView" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:src="@drawable/share"/>
+
+
+
+            <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chapter 2.4"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/linearLayout"
+            />
+
+        <!-- Container view to scroll horizontally which gives the carousel effect -->
+    <HorizontalScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <!-- Carousel items container - lays out items horizontally -->
+        <LinearLayout android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+    </HorizontalScrollView>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chapter 2.2"
+            android:id="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/linearLayout"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"/>
+    <!--
+        <EditText
+            android:layout_marginRight="0dp"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/editText"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:background="#ffffffff"
+            android:hint="Comment..."/>-->
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
