@@ -43,6 +43,8 @@ public class MyCollection extends ActionBarActivity  {
 
     ImageButton share;
     ImageButton back;
+    ImageButton share2;
+    ImageButton full;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +57,7 @@ public class MyCollection extends ActionBarActivity  {
         share = (ImageButton)findViewById(R.id.imageButton);
 
 
-        share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MyCollection.this, Share_Activity.class));
-                finish();
-            }
-        });
+
 
         back = (ImageButton)findViewById(R.id.imageButton2);
 
@@ -73,7 +69,18 @@ public class MyCollection extends ActionBarActivity  {
             }
         });
 
+        share2= (ImageButton)findViewById(R.id.imageButton10);
 
+
+        full= (ImageButton)findViewById(R.id.imageButton11);
+
+        full.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyCollection.this, pdf_activity.class));
+
+            }
+        });
 
 
     }
@@ -132,4 +139,15 @@ public class MyCollection extends ActionBarActivity  {
             mCarouselContainer.addView(imageItem);
         }
     }
+
+
+    public void share(View view){
+
+        startActivity(new Intent(MyCollection.this, Share_Activity.class));
+
+
+
+    }
+
+
 }

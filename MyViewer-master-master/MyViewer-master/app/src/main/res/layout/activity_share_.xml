@@ -33,12 +33,25 @@
                 android:layout_gravity="right|center_vertical"
                 android:src="@drawable/person"/>
 
-            <TextView
-                android:layout_width="77dp"
-                android:layout_height="41dp"
-                android:text="Ken"
-                android:id="@+id/textView3"
-                android:layout_gravity="left|bottom" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left|bottom">
+
+                <FrameLayout
+                    android:layout_width="53dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left|bottom">
+
+                    <TextView
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:text="Ken"
+                        android:id="@+id/textView3"
+                        android:layout_gravity="right|center_vertical" />
+                </FrameLayout>
+
+            </FrameLayout>
 
         </FrameLayout>
 
@@ -75,14 +88,6 @@
                 android:layout_gravity="right|center_vertical"
                 android:src="@drawable/person" />
         </FrameLayout>
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageButton9"
-            android:src="@drawable/arrow_back"
-            android:onClick="back"
-            android:layout_gravity="left|top" />
 
         <FrameLayout
             android:layout_width="234dp"

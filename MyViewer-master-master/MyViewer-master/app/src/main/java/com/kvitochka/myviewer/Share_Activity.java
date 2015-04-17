@@ -35,7 +35,7 @@ public class Share_Activity extends ActionBarActivity {
         btn5 = (ImageButton)findViewById(R.id.imageButton5);
         btn6 = (ImageButton)findViewById(R.id.imageButton6);
         btn7 = (ImageButton)findViewById(R.id.imageButton7);
-        btn9 = (ImageButton)findViewById(R.id.imageButton9);
+
 
 
 
@@ -102,7 +102,7 @@ public class Share_Activity extends ActionBarActivity {
 
 
         startActivity(new Intent(Share_Activity.this, MyCollection.class));
-        finish();
+
 
     }
 

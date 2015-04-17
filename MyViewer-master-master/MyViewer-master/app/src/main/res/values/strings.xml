@@ -9,5 +9,6 @@
     <string name="text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dui, vitae tincidunt dolor efficitur gravida. Maecenas sed lorem et dui venenatis commodo. Quisque ut tempus felis, sit amet porttitor augue. Praesent pharetra id ipsum vitae posuere. Pellentesque dapibus, dui sed tincidunt accumsan, arcu urna finibus turpis, ac cursus arcu sapien id sem. Etiam tempus dolor in tortor scelerisque faucibus."</string>
 
     <string name="request">Please Change a Friend to Share</string>
+        <string name="title_activity_pdf_activity">pdf_activity</string>
 
 </resources>

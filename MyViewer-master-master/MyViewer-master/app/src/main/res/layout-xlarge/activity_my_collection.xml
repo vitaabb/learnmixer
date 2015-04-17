@@ -115,9 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton"
-                android:src="@drawable/share"
-                android:onClick="share"/>
-
+                android:src="@drawable/share"/>
 
 
             <TextView
@@ -143,31 +141,12 @@
 
     </HorizontalScrollView>
 
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton10"
+                android:src="@drawable/share"/>
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageButton11"
-                    android:src="@drawable/fullscreen"
-                    android:layout_gravity="right" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageButton12"
-                    android:src="@drawable/share"
-                    android:onClick="share"
-                    android:layout_gravity="left|center_vertical" />
-            </FrameLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></LinearLayout>
 
             <TextView
             android:layout_marginLeft="20dp"
