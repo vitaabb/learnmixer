@@ -24,6 +24,7 @@
                 android:onClick="share"
                 android:layout_gravity="left|center_vertical"
                 android:src="@drawable/person"
+                android:background="@color/bright_foreground_material_dark"
                 />
 
             <ImageButton
@@ -31,12 +32,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton5"
                 android:layout_gravity="right|center_vertical"
-                android:src="@drawable/person"/>
+                android:src="@drawable/person"
+                android:onClick="share"
+                android:background="@color/bright_foreground_material_dark"/>
 
             <FrameLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_gravity="left|bottom">
+                android:layout_gravity="center">
 
                 <FrameLayout
                     android:layout_width="53dp"
@@ -48,45 +51,27 @@
                         android:layout_height="41dp"
                         android:text="Ken"
                         android:id="@+id/textView3"
-                        android:layout_gravity="right|center_vertical" />
+                        android:layout_gravity="left|top" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="140dp"
+                    android:layout_height="178dp"
+                    android:layout_gravity="center" >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton4"
+                        android:layout_gravity="center"
+                        android:src="@drawable/person"
+                        android:onClick="share"
+                        android:background="@color/bright_foreground_material_dark"/>
+
                 </FrameLayout>
 
             </FrameLayout>
 
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="140dp"
-            android:layout_height="178dp"
-            android:layout_gravity="center" >
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton4"
-                android:layout_gravity="center"
-                android:src="@drawable/person"/>
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="140dp"
-            android:layout_height="178dp"
-            android:layout_gravity="right|center_vertical" >
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton6"
-                android:layout_gravity="left|center_vertical"
-                android:src="@drawable/person" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton7"
-                android:layout_gravity="right|center_vertical"
-                android:src="@drawable/person" />
         </FrameLayout>
 
         <FrameLayout
@@ -101,6 +86,30 @@
                 android:id="@+id/textView"
                 android:layout_gravity="center"
                 />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="140dp"
+            android:layout_height="178dp"
+            android:layout_gravity="center" >
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton7"
+                android:layout_gravity="center"
+                android:src="@drawable/person"
+                android:onClick="share"
+                android:background="@color/bright_foreground_material_dark"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton6"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/person"
+                android:onClick="share"
+                android:background="@color/bright_foreground_material_dark"/>
         </FrameLayout>
 
     </FrameLayout>
