@@ -67,11 +67,10 @@
             android:id="@+id/jh">
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="2dp"
+                android:layout_height="2dp"
                 android:id="@+id/imageButton2"
-                android:src="@drawable/arrow_back"
-                />
+                android:visibility="invisible" />
 
             <TextView
                 android:layout_marginLeft="20dp"
@@ -116,7 +115,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/imageButton"
                 android:src="@drawable/share"
-                android:onClick="share"/>
+                android:onClick="share"
+                android:background="@color/bright_foreground_material_dark"/>
 
 
 
@@ -153,7 +153,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageButton11"
                     android:src="@drawable/fullscreen"
-                    android:layout_gravity="right" />
+                    android:layout_gravity="right"
+                    android:background="@color/bright_foreground_material_dark"/>
 
                 <ImageButton
                     android:layout_width="wrap_content"
@@ -161,7 +162,8 @@
                     android:id="@+id/imageButton12"
                     android:src="@drawable/share"
                     android:onClick="share"
-                    android:layout_gravity="left|center_vertical" />
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@color/bright_foreground_material_dark"/>
             </FrameLayout>
 
             <LinearLayout
@@ -178,6 +180,7 @@
             android:id="@+id/textView2"
             android:layout_marginTop="10dp"
             android:layout_below="@+id/linearLayout"
+
             />
 
         <TextView
@@ -190,7 +193,8 @@
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="0dp"/>
+            android:layout_marginRight="0dp"
+            />
     <!--
         <EditText
             android:layout_marginRight="0dp"

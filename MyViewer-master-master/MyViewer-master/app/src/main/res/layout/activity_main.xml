@@ -73,7 +73,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="openCollection" />
+        android:onClick="openCollection"
+        android:background="@color/bright_foreground_material_dark"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -83,7 +84,8 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
         android:src="@drawable/exit"
-        android:onClick="exit"/>
+        android:onClick="exit"
+        android:background="@color/bright_foreground_material_dark"/>
 
 
 </RelativeLayout>

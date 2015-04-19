@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.kvitochka.myviewer.pdf_activity">
+    tools:context="com.kvitochka.myviewer.pdf_activity"
+    android:background="@color/bright_foreground_material_dark">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -18,11 +19,17 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:src="@drawable/puppy_01"/>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/puppy_01"
+                    android:layout_gravity="center" />
+            </FrameLayout>
 
             <ImageView
                 android:layout_width="10dp"
@@ -30,44 +37,98 @@
                 android:id="@+id/imageView6"
                 />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
-                android:src="@drawable/puppy_02"/>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/puppy_02"
+                    android:layout_gravity="center" />
+            </FrameLayout>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:id="@+id/imageView7" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView3"
-                android:src="@drawable/puppy_03"/>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/puppy_03"
+                    android:layout_gravity="center" />
+            </FrameLayout>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:id="@+id/imageView8" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
-                android:src="@drawable/puppy_04"/>
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/puppy_04"
+                    android:layout_gravity="center" />
+            </FrameLayout>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"
                 android:id="@+id/imageView9" />
 
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView5"
+                    android:src="@drawable/puppy_05"
+                    android:layout_gravity="center_horizontal|top" />
+            </FrameLayout>
+
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView5"
-                android:src="@drawable/puppy_05"/>
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:id="@+id/img" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <Button
+                    android:id="@+id/previous"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Previous"/>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Next"/>
+                
+                
+                </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
