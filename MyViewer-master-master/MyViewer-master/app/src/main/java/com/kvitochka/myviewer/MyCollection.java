@@ -1,6 +1,7 @@
 package com.kvitochka.myviewer;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.v7.app.ActionBarActivity;
@@ -12,7 +13,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+import android.widget.VideoView;
 
 
 /////////////////
@@ -29,7 +30,7 @@ import android.widget.LinearLayout;
 
 
 
-public class MyCollection extends ActionBarActivity  {
+public class MyCollection extends ActionBarActivity   {
 
     /**
      * Define the number of items visible when the carousel is first shown.
@@ -46,10 +47,17 @@ public class MyCollection extends ActionBarActivity  {
     ImageButton share2;
     ImageButton full;
 
+    VideoView videoView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_collection);
+
+
+
+
+
 
         // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
@@ -145,9 +153,18 @@ public class MyCollection extends ActionBarActivity  {
 
         startActivity(new Intent(MyCollection.this, Share_Activity.class));
 
+    }
 
+
+
+    public void change(View view){
+
+        startActivity(new Intent(MyCollection.this, VideoActivity.class));
 
     }
+
+
+
 
 
 }

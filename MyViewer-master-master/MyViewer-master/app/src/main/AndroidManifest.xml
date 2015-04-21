@@ -3,7 +3,9 @@
     package="com.kvitochka.myviewer" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,17 +23,24 @@
         <activity
             android:name=".MyCollection"
             android:label="@string/title_activity_my_collection"
-            android:parentActivityName=".MainActivity"
-            >
+            android:parentActivityName=".MainActivity" >
         </activity>
         <activity
             android:name=".Share_Activity"
             android:label="@string/title_activity_share_"
-            android:parentActivityName=".MyCollection">
+            android:parentActivityName=".MyCollection" >
         </activity>
         <activity
             android:name=".pdf_activity"
             android:label="@string/title_activity_pdf_activity"
+            android:parentActivityName=".MyCollection" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kvitochka.myviewer.MyCollection" />
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video"
             android:parentActivityName=".MyCollection" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

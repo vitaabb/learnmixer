@@ -10,5 +10,6 @@
 
     <string name="request">Please Change a Friend to Share</string>
         <string name="title_activity_pdf_activity">pdf_activity</string>
+        <string name="title_activity_video">VideoActivity</string>
 
 </resources>

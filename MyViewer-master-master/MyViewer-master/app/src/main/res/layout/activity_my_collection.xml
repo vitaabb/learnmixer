@@ -105,20 +105,39 @@
             />
 
 
-        <VideoView
-            android:layout_width="fill_parent"
-            android:layout_height="300dp"
-            android:id="@+id/videoView" />
+            <VideoView
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
-                android:src="@drawable/share"
-                android:onClick="share"
-                android:background="@color/bright_foreground_material_dark"/>
+            android:id="@+id/videoView"
+
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+
+                />
 
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton9"
+                    android:src="@drawable/share"
+                    android:onClick="share"
+                    android:background="@color/bright_foreground_material_dark" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton13"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/play"
+                    android:onClick="change"
+                    android:background="@color/bright_foreground_material_dark"/>
+
+            </FrameLayout>
 
             <TextView
             android:layout_marginLeft="20dp"
