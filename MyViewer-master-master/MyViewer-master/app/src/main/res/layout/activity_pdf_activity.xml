@@ -6,7 +6,7 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.kvitochka.myviewer.pdf_activity"
-    android:background="@color/bright_foreground_material_dark">
+    android:background="@color/white">
 
     <ScrollView
         android:layout_width="fill_parent"

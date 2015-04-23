@@ -62,7 +62,7 @@ public class MyCollection extends ActionBarActivity   {
         // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
 
-        share = (ImageButton)findViewById(R.id.imageButton);
+
 
 
 
@@ -77,7 +77,7 @@ public class MyCollection extends ActionBarActivity   {
             }
         });
 
-        share2= (ImageButton)findViewById(R.id.imageButton10);
+
 
 
         full= (ImageButton)findViewById(R.id.imageButton11);

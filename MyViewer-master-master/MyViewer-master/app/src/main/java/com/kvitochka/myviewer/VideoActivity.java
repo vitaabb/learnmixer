@@ -1,5 +1,6 @@
 package com.kvitochka.myviewer;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
@@ -8,6 +9,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -76,5 +78,15 @@ public class VideoActivity extends Activity {
         getMenuInflater().inflate(R.menu.menu_video, menu);
         return true;
     }
+
+
+
+    public void back(View view){
+
+        startActivity(new Intent(VideoActivity.this, MyCollection.class));
+        finish();
+    }
+
+
 
 }

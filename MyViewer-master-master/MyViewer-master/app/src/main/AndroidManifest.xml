@@ -41,7 +41,7 @@
         <activity
             android:name=".VideoActivity"
             android:label="@string/title_activity_video"
-            android:parentActivityName=".MyCollection" >
+            android:parentActivityName=".MyCollection">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kvitochka.myviewer.MyCollection" />

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     tools:context=".MainActivity"
-    android:background="@color/bright_foreground_material_dark">
+    android:background="@color/white">
 <!--
     <LinearLayout
         android:orientation="horizontal"
@@ -74,7 +74,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="openCollection"
-        android:background="@color/bright_foreground_material_dark"/>
+        android:background="@color/white"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
         android:layout_alignStart="@+id/textView2"
         android:src="@drawable/exit"
         android:onClick="exit"
-        android:background="@color/bright_foreground_material_dark"/>
+        android:background="@color/white"/>
 
 
 </RelativeLayout>
