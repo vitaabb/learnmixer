@@ -21,18 +21,19 @@
             </intent-filter>
         </activity>
         <activity
+
             android:name=".MyCollection"
-            android:label="@string/title_activity_my_collection"
+            android:label="Collection"
             android:parentActivityName=".MainActivity" >
         </activity>
         <activity
             android:name=".Share_Activity"
-            android:label="@string/title_activity_share_"
+            android:label="Friends"
             android:parentActivityName=".MyCollection" >
         </activity>
         <activity
             android:name=".pdf_activity"
-            android:label="@string/title_activity_pdf_activity"
+            android:label="PDF"
             android:parentActivityName=".MyCollection" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -40,7 +41,7 @@
         </activity>
         <activity
             android:name=".VideoActivity"
-            android:label="@string/title_activity_video"
+            android:label="Video"
             android:parentActivityName=".MyCollection">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

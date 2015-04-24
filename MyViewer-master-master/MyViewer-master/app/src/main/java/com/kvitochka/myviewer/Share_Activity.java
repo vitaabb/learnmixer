@@ -14,12 +14,7 @@ import android.widget.ImageButton;
 public class Share_Activity extends ActionBarActivity {
 
 
-    ImageButton btn3;
-    ImageButton btn4;
-    ImageButton btn5;
-    ImageButton btn6;
-    ImageButton btn7;
-    ImageButton btn9;
+
 
 
 
@@ -30,11 +25,7 @@ public class Share_Activity extends ActionBarActivity {
         setContentView(R.layout.activity_share_);
 
 
-        btn3 = (ImageButton)findViewById(R.id.imageButton3);
-        btn4 = (ImageButton)findViewById(R.id.imageButton4);
-        btn5 = (ImageButton)findViewById(R.id.imageButton5);
-        btn6 = (ImageButton)findViewById(R.id.imageButton6);
-        btn7 = (ImageButton)findViewById(R.id.imageButton7);
+
 
 
 
@@ -70,7 +61,7 @@ public class Share_Activity extends ActionBarActivity {
     public void share(View view){
 
         AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
-        myAlert.setMessage("Shared with Ken :)")
+        myAlert.setMessage("Shared with Kensuke")
                 .setPositiveButton("OK",new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -95,6 +86,60 @@ public class Share_Activity extends ActionBarActivity {
 
 
     }
+
+
+
+
+    public void share2(View view){
+
+        AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
+        myAlert.setMessage("Shared with Group1")
+                .setPositiveButton("OK",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+
+                        startActivity(new Intent(Share_Activity.this, MyCollection.class));
+                        finish();
+                    }
+                })
+                .setIcon(R.drawable.shared)
+                .setTitle("SHARED")
+
+                .create();
+        myAlert.show();
+
+
+    }
+
+
+
+    public void share3(View view){
+
+        AlertDialog.Builder myAlert = new AlertDialog.Builder(this);
+        myAlert.setMessage("Shared with Group2")
+                .setPositiveButton("OK",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+
+                        startActivity(new Intent(Share_Activity.this, MyCollection.class));
+                        finish();
+                    }
+                })
+                .setIcon(R.drawable.shared)
+                .setTitle("SHARED")
+
+                .create();
+        myAlert.show();
+
+
+    }
+
+
+
 
 
     public void back(View view){
