@@ -1,0 +1,219 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.developmet.umair.MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/usrprofilelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/profilebanner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/usr1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/usr1"
+            />
+
+        <Button
+            android:id="@+id/usr3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/usr3"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/usr2"
+             />
+
+        <Button
+            android:id="@+id/usr4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/usr4"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/usr3"
+            />
+
+        <Button
+            android:id="@+id/usr2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="42dp"
+            android:background="@drawable/usr2" />
+
+        <Button
+            android:id="@+id/usr5"
+            style="?android:attr/buttonStyleSmall"
+          	android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/usr5"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/usr4"
+             />
+
+        <Button
+            android:id="@+id/usraddbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/addbtn"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/usr5"
+             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/profilebanner"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/videodocbutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/video" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainbodylayout"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="185dp"
+        android:layout_below="@+id/usrprofilelayout"
+        android:layout_above="@+id/bottomlayout"
+        android:layout_centerVertical="true"
+        
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/imagedocbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@drawable/image"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+             />
+
+        <Button
+            android:id="@+id/videodocbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:background="@drawable/video"
+           
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/deletebutton"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/delete"
+            />
+
+        <Button
+            android:id="@+id/gdrivebtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/slideshowbtn"
+            android:background="@drawable/gdrive"
+            android:layout_alignParentRight="true"
+             />
+
+        <Button
+            android:id="@+id/chromebtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/gdrivebtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chrome" />
+
+        <Button
+            android:id="@+id/youtubebtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/chromebtn"
+            android:background="@drawable/youtube"
+            android:layout_alignParentRight="true"
+            />
+
+        <Button
+            android:id="@+id/pdfdocbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="65dp"
+            android:layout_alignBottom="@+id/folderbtn"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/pdf" />
+
+        <Button
+            android:id="@+id/textdocbtn"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/text" />
+
+        <Button
+            android:id="@+id/folderbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_alignRight="@+id/videodocbtn"
+            android:layout_alignTop="@+id/chromebtn"
+            android:background="@drawable/folder" />
+
+        <Button
+            android:id="@+id/slideshowbtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/morebtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/slideshow" />
+
+        <Button
+            android:id="@+id/morebtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/addbtn" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

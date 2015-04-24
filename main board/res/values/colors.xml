@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="actionbar">#513252</color>
+
+<color name="profilebanner">#f9ddfa</color> 
+<color name="bright_foreground_material_dark">#f9ddfa</color> 
+  
+</resources>
