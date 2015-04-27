@@ -1,11 +1,10 @@
 package com.kvitochka.myviewer;
 
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,21 +13,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.VideoView;
-
-
-/////////////////
-
-
-
-
-
-//////////////////////
-
-
-
-
-
-
 
 public class MyCollection extends ActionBarActivity   {
 
@@ -54,21 +38,9 @@ public class MyCollection extends ActionBarActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_collection);
 
-
-
-
-
-
         // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
-
-
-
-
-
-
         back = (ImageButton)findViewById(R.id.imageButton2);
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,17 +49,12 @@ public class MyCollection extends ActionBarActivity   {
             }
         });
 
-
-
-
         full= (ImageButton)findViewById(R.id.imageButton11);
-
         full.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MyCollection.this, pdf_activity.class));
-
-            }
+           }
         });
 
 
