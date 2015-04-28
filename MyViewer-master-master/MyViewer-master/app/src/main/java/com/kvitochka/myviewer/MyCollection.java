@@ -1,11 +1,10 @@
 package com.kvitochka.myviewer;
 
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,10 +37,22 @@ public class MyCollection extends ActionBarActivity   {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_collection);
-      // Get reference to carousel container
+
+
+
+
+
+
+        // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
+
         share = (ImageButton)findViewById(R.id.imageButton);
+
+
+
+
         back = (ImageButton)findViewById(R.id.imageButton2);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
