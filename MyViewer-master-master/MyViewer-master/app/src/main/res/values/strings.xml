@@ -6,18 +6,15 @@
     <string name="title_activity_my_collection">MyCollection</string>
         <string name="title_activity_share_">Share_Activity</string>
 
-    <string name="text1">"In the same way as we draw lines on a map or plan, imaginary lines are drawn on the earth. Exactly halfway between the north and south poles, we find the EQUATOR. The equator is called the 0° line of latitude, and runs from east to west. Parallel to the 0° line of latitude, we also find a 90°N and a 90°S line of latitude at the two poles.
-The equator divides the globe into two halves. The upper half is called the NORTHERN HEMISPHERE and the lower one the SOUTHERN HEMISPHERE."</string>
-    <string name="text2">"
-A few important facts:
-The best known is the Greenwich meridian (0° line of longitude).
-From Greenwich (0°) the lines of longitude are numbered to the east up to 180°.
-This forms the Eastern Hemisphere.
-From Greenwich (0°) the lines of longitude are also numbered to the west up to 180°.
-This forms the Western Hemisphere.
-Lines of longitude meet at the poles and are all the same length.
-At the equator the lines of longitude are furthest from each other.
-When the location of a place is indicated, the longitude is always mentioned second."</string>
+    <string name="text1">"   ESA spacecraft, named Rosetta, is on a comet now, placed on it! Rosetta is the most complex space mission ever flown by Europe.
+     The mission is named after the Rosetta Stone, an ancient stone tablet that allowed us to decode ancient Egyptian Hieroglyphics. Like the Rosetta Stone, ESA’s Rosetta mission will reshape our understanding of the past by unlocking the mysteries of objects made from the leftovers of when our Solar System formed: comets.
+     After travelling for 10 long years, covering over half the length of the Solar System and looping around the Sun five times, the Rosetta spacecraft has finally arrived at its destination: Comet 67P/ Churyumov–Gerasimenko!
+     "</string>
+    <string name="text2">"One year from now, the pair will approach the closest point to the Sun on their tour of the Solar System — this is where the comet will really begin to shine.
+
+Comets are lumps of cosmic ice and rock, which means that as Comet 67P travels closer to the Sun it will begin to melt. The vapourised ice from the comet will create a magnificent tail like those we are sometimes lucky enough to see travelling across our skies.
+
+Unfortunately, Comet 67P won’t be visible in our night sky without powerful telescopes, even with its dazzling tail. Instead, Rosetta will provide us with something better — an up-close view of how the comet changes in the glare of the Sun!"</string>
 
 
     <string name="request">Please Change a Friend or Group to share</string>
