@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Learnmixer_Login</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="white">#ffffffff</color>
+    <string name="username">Username</string>
+        <string name="title_activity_main">MainActivity</string>
+</resources>
