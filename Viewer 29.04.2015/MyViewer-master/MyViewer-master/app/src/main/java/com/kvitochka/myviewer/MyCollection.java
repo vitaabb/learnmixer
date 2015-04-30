@@ -1,11 +1,10 @@
 package com.kvitochka.myviewer;
 
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,10 +13,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.VideoView;
-import android.app.Activity;
 
 
-public class MyCollection extends Activity   {
+public class MyCollection extends ActionBarActivity   {
 
     /**
      * Define the number of items visible when the carousel is first shown.

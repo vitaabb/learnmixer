@@ -58,7 +58,8 @@
             android:layout_height="fill_parent"
             android:id="@+id/scrollView"
             android:background="#fff1f1f1"
-            android:fillViewport="false">
+            android:fillViewport="false"
+            android:scrollbars="vertical">
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="500dp"
@@ -80,13 +81,13 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="DETERMINING THE DIRECTION"
+                android:text="Rosetta"
                 android:id="@+id/textView5"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-
+                android:elevation="5dp"
                 android:textStyle="bold"
                 android:textSize="40dp"/>
 
@@ -98,11 +99,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="1. Using lines of longitude and latitude to indicate location"
+                android:text="1. What is Rosetta? Where is it?"
                 android:textSize="25dp"
                 android:textStyle="bold"
                 android:layout_below="@+id/linearLayout"
                 android:textColor="@color/red"
+                android:id="@+id/rosetta1"
                 />
 
             <TextView
@@ -130,7 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="2. Angry face"
+            android:text="Chapter 2"
 
             android:textStyle="bold"
             android:layout_below="@+id/linearLayout"
@@ -149,7 +151,20 @@
                 android:background="@color/button_material_light"
                 android:src="@drawable/play0" />
 -->
-            <VideoView
+            <ImageButton
+            android:layout_width="660dp"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="360dp"
+            android:id="@+id/imageButton13"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:onClick="change"
+            android:background="@color/button_material_light"
+            android:src="@drawable/play0" />
+
+           <!-- <VideoView
                 android:layout_width="fill_parent"
                 android:layout_height="360dp"
                 android:id="@+id/videoView"
@@ -157,7 +172,7 @@
                 android:layout_marginRight="60dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                />
+                /> -->
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -186,7 +201,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
 
-            android:text="3. Affective grid"
+            android:text="Chapter 3"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="@color/red"
@@ -261,7 +276,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="3. Lines of longitude"
+                android:text="4. What is the plan?"
                 android:id="@+id/textView2"
                 android:layout_margin="0dp"
                 android:textSize="25dp"
@@ -278,8 +293,7 @@
                     android:layout_width="250dp"
                     android:layout_height="250dp"
                     android:id="@+id/imageView10"
-                    android:src="@drawable/world"
-
+                    android:src="@drawable/rosetta1"
                     android:layout_gravity="right|top" />
 
                 <TextView
@@ -290,7 +304,7 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="@string/text2"
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView9"
                     android:layout_below="@+id/textView2"
                     android:layout_alignLeft="@+id/textView2"
                     android:layout_alignStart="@+id/textView2"
