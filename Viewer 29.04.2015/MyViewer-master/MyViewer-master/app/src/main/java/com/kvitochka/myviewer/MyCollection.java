@@ -4,7 +4,6 @@ package com.kvitochka.myviewer;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
