@@ -55,7 +55,7 @@
         <ScrollView
             android:fadingEdgeLength="0dp"
             android:layout_width="fill_parent"
-            android:layout_height="1045dp"
+            android:layout_height="fill_parent"
             android:id="@+id/scrollView"
             android:background="#fff1f1f1"
             android:fillViewport="false"
@@ -69,8 +69,7 @@
             android:layout_marginRight="10dp"
             android:orientation="vertical"
             android:weightSum="1"
-            android:id="@+id/jh"
-            android:background="@color/white">
+            android:id="@+id/jh">
 
             <ImageButton
                 android:layout_width="2dp"
@@ -339,22 +338,5 @@
 
     </LinearLayout>
     </ScrollView>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/white">
-
-        <ImageButton
-            android:layout_width="82dp"
-            android:layout_height="77dp"
-            android:id="@+id/imageButton6"
-            android:src="@drawable/share"
-            android:onClick="share"
-            android:layout_margin="10dp"
-            android:layout_gravity="right|bottom"
-            android:background="@color/white"/>
-    </FrameLayout>
 
 </LinearLayout>
