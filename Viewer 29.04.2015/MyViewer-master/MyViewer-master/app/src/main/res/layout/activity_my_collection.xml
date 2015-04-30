@@ -151,6 +151,17 @@
                 android:background="@color/button_material_light"
                 android:src="@drawable/play0" />
 -->
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/youtube_player"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:padding="5dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
             <ImageButton
             android:layout_width="660dp"
 
