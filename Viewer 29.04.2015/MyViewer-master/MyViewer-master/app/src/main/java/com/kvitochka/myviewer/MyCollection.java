@@ -109,6 +109,7 @@ public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.O
 
         @Override
         public void onPlaying() {
+
         }
 
         @Override
