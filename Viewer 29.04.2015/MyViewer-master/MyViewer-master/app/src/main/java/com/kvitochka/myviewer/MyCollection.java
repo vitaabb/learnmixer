@@ -54,8 +54,9 @@ public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.O
 
         /** Initializing YouTube player view **/
         YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
-        youTubePlayerView.initialize(API_KEY, this);
 
+        youTubePlayerView.initialize(API_KEY, this);
+        //youTubePlayerView.setVisibility(View.GONE);
         // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
         back = (ImageButton)findViewById(R.id.imageButton2);
@@ -68,11 +69,7 @@ public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.O
             }
         });
 
-
-
-
         full= (ImageButton)findViewById(R.id.imageButton11);
-
         full.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,10 +77,7 @@ public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.O
 
             }
         });
-
-
     }
-
 
     @Override
     public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
