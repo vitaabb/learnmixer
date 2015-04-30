@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
@@ -24,7 +25,7 @@ import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 
-public class MyCollection extends ActionBarActivity  implements YouTubePlayer.OnInitializedListener {
+public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
 
     /**
@@ -33,7 +34,7 @@ public class MyCollection extends ActionBarActivity  implements YouTubePlayer.On
     private static final float INITIAL_ITEMS_COUNT = 1.2F;
     public static final String API_KEY = "AIzaSyComCpD-uU2A1Nj22PgM1uj5_VDaRglvmw";
     //http://youtu.be/<VIDEO_ID>
-    public static final String VIDEO_ID = "dKLftgvYsVU";
+    public static final String VIDEO_ID = "I64Wc1b-ONc";
 
     /**
      * Carousel container layout
