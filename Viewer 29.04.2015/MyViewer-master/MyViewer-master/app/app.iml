@@ -103,6 +103,10 @@
     <orderEntry type="library" exported="" name="wearable-1.1.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-safetynet-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-nearby-7.0.0" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" exported="" name="YouTubeAndroidPlayerApi" level="project" />
+>>>>>>> origin/master
     <orderEntry type="library" exported="" name="play-services-fitness-7.0.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />

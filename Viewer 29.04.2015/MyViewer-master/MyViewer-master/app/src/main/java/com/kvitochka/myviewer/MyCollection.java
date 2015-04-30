@@ -12,15 +12,28 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
+import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
+import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.google.android.youtube.player.YouTubePlayerView;
 
-public class MyCollection extends ActionBarActivity   {
+
+public class MyCollection extends ActionBarActivity  implements YouTubePlayer.OnInitializedListener {
+
 
     /**
      * Define the number of items visible when the carousel is first shown.
      */
     private static final float INITIAL_ITEMS_COUNT = 1.2F;
+    public static final String API_KEY = "AIzaSyComCpD-uU2A1Nj22PgM1uj5_VDaRglvmw";
+    //http://youtu.be/<VIDEO_ID>
+    public static final String VIDEO_ID = "dKLftgvYsVU";
 
     /**
      * Carousel container layout
@@ -39,19 +52,12 @@ public class MyCollection extends ActionBarActivity   {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_collection);
 
-
-
-
-
+        /** Initializing YouTube player view **/
+        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+        youTubePlayerView.initialize(API_KEY, this);
 
         // Get reference to carousel container
         mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
-
-
-
-
-
-
         back = (ImageButton)findViewById(R.id.imageButton2);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +84,75 @@ public class MyCollection extends ActionBarActivity   {
 
     }
 
+
+    @Override
+    public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
+        Toast.makeText(this, "Failured to Initialize!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
+
+        /** add listeners to YouTubePlayer instance **/
+        player.setPlayerStateChangeListener(playerStateChangeListener);
+        player.setPlaybackEventListener(playbackEventListener);
+
+        /** Start buffering **/
+        if (!wasRestored) {
+            player.cueVideo(VIDEO_ID);
+        }
+    }
+
+    private PlaybackEventListener playbackEventListener = new PlaybackEventListener() {
+
+        @Override
+        public void onBuffering(boolean arg0) {
+        }
+
+        @Override
+        public void onPaused() {
+        }
+
+        @Override
+        public void onPlaying() {
+        }
+
+        @Override
+        public void onSeekTo(int arg0) {
+        }
+
+        @Override
+        public void onStopped() {
+        }
+
+    };
+
+    private PlayerStateChangeListener playerStateChangeListener = new PlayerStateChangeListener() {
+
+        @Override
+        public void onAdStarted() {
+        }
+
+        @Override
+        public void onError(ErrorReason arg0) {
+        }
+
+        @Override
+        public void onLoaded(String arg0) {
+        }
+
+        @Override
+        public void onLoading() {
+        }
+
+        @Override
+        public void onVideoEnded() {
+        }
+
+        @Override
+        public void onVideoStarted() {
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
