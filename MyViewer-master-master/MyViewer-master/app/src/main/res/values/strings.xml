@@ -6,6 +6,7 @@
     <string name="title_activity_my_collection">MyCollection</string>
         <string name="title_activity_share_">Share_Activity</string>
 
+    <string name="text">"Hello "</string>
     <string name="text1">"   ESA spacecraft, named Rosetta, is on a comet now, placed on it! Rosetta is the most complex space mission ever flown by Europe.
      The mission is named after the Rosetta Stone, an ancient stone tablet that allowed us to decode ancient Egyptian Hieroglyphics. Like the Rosetta Stone, ESA’s Rosetta mission will reshape our understanding of the past by unlocking the mysteries of objects made from the leftovers of when our Solar System formed: comets.
      After travelling for 10 long years, covering over half the length of the Solar System and looping around the Sun five times, the Rosetta spacecraft has finally arrived at its destination: Comet 67P/ Churyumov–Gerasimenko!

@@ -44,9 +44,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-
-
-public class pdf_activity extends ActionBarActivity {
+public class pdf_activity extends Activity {
 
 
     @Override
