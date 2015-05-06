@@ -1,0 +1,423 @@
+package com.hcilearnmix.learnmixer;
+
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.res.TypedArray;
+import android.net.wifi.p2p.WifiP2pManager;
+import android.net.wifi.p2p.WifiP2pManager.Channel;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+import android.widget.VideoView;
+
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayer.ErrorReason;
+import com.google.android.youtube.player.YouTubePlayer.PlaybackEventListener;
+import com.google.android.youtube.player.YouTubePlayer.PlayerStateChangeListener;
+import com.google.android.youtube.player.YouTubePlayer.Provider;
+import com.google.android.youtube.player.YouTubePlayerView;
+//import com.hcilearnmix.learnmixer.crossdevice.DeviceDetailFragment;
+//import com.hcilearnmix.learnmixer.crossdevice.DeviceListFragment;
+//import com.hcilearnmix.learnmixer.crossdevice.WiFiDirectActivity;
+//import com.hcilearnmix.learnmixer.crossdevice.WiFiDirectBroadcastReceiver;
+//import com.hcilearnmix.learnmixer.crossdevice.DeviceListFragment.DeviceActionListener;
+
+import android.net.wifi.p2p.WifiP2pConfig;
+import android.net.wifi.p2p.WifiP2pDevice;
+import android.net.wifi.p2p.WifiP2pManager;
+import android.net.wifi.p2p.WifiP2pManager.ActionListener;
+import android.net.wifi.p2p.WifiP2pManager.Channel;
+import android.net.wifi.p2p.WifiP2pManager.ChannelListener;
+
+import com.hcilearnmix.learnmixer.crossdevice.*;
+
+public class MyCollection extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener, ChannelListener{ //, DeviceActionListener  {
+	int state=0;
+	 public static final String TAG = "wifidirectdemo";
+	    private WifiP2pManager manager;
+	    private boolean isWifiP2pEnabled = false;
+	    private boolean retryChannel = false;
+
+	    private final IntentFilter intentFilter = new IntentFilter();
+	    private Channel channel;
+	    private BroadcastReceiver receiver = null;
+    /**
+     * Define the number of items visible when the carousel is first shown.
+     */
+    private static final float INITIAL_ITEMS_COUNT = 1.2F;
+    public static final String API_KEY = "AIzaSyComCpD-uU2A1Nj22PgM1uj5_VDaRglvmw";
+    //http://youtu.be/<VIDEO_ID>
+    public static final String VIDEO_ID = "I64Wc1b-ONc";
+
+    /**
+     * Carousel container layout
+     */
+    private LinearLayout mCarouselContainer;
+
+    ImageButton share;
+    ImageButton back;
+    ImageButton share2;
+    ImageButton full;
+
+    VideoView videoView;
+ 
+    /**
+     * @param isWifiP2pEnabled the isWifiP2pEnabled to set
+     */
+    public void setIsWifiP2pEnabled(boolean isWifiP2pEnabled) {
+        this.isWifiP2pEnabled = isWifiP2pEnabled;
+    }
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_collection);
+
+     // add necessary intent values to be matched.
+
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_PEERS_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_CONNECTION_CHANGED_ACTION);
+        intentFilter.addAction(WifiP2pManager.WIFI_P2P_THIS_DEVICE_CHANGED_ACTION);
+
+        manager = (WifiP2pManager) getSystemService(Context.WIFI_P2P_SERVICE);
+        channel = manager.initialize(this, getMainLooper(), null);
+    
+        
+        /** Initializing YouTube player view **/
+        YouTubePlayerView youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_player);
+
+        youTubePlayerView.initialize(API_KEY, this);
+        //youTubePlayerView.setVisibility(View.GONE);
+        // Get reference to carousel container
+        mCarouselContainer = (LinearLayout) findViewById(R.id.carousel);
+        back = (ImageButton)findViewById(R.id.imageButton2);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyCollection.this, MainActivity.class));
+                finish();
+            }
+        });
+
+        /*full= (ImageButton)findViewById(R.id.imageButton11);
+        full.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MyCollection.this, Pdf_activity.class));
+
+            }
+        });*/
+    }
+
+    /** register the BroadcastReceiver with the intent values to be matched */
+    @Override
+    public void onResume() {
+        super.onResume();
+       // receiver = new WiFiDirectBroadcastReceiver(manager, channel, this);
+       // registerReceiver(receiver, intentFilter);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
+    }
+    
+     public void resetData() {
+        //DeviceListFragment fragmentList = (DeviceListFragment) getFragmentManager()
+          //      .findFragmentById(R.id.frag_list);
+        //DeviceDetailFragment fragmentDetails = (DeviceDetailFragment) getFragmentManager()
+          //      .findFragmentById(R.id.frag_detail);
+        //if (fragmentList != null) {
+          //  fragmentList.clearPeers();
+        //}
+        //if (fragmentDetails != null) {
+          //  fragmentDetails.resetViews();
+        //}
+    }
+   
+    @Override
+    public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
+        Toast.makeText(this, "Failured to Initialize!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean wasRestored) {
+
+        /** add listeners to YouTubePlayer instance **/
+        player.setPlayerStateChangeListener(playerStateChangeListener);
+        player.setPlaybackEventListener(playbackEventListener);
+
+        /** Start buffering **/
+        if (!wasRestored) {
+            player.cueVideo(VIDEO_ID);
+        }
+    }
+
+    private PlaybackEventListener playbackEventListener = new PlaybackEventListener() {
+
+        @Override
+        public void onBuffering(boolean arg0) {
+        }
+
+        @Override
+        public void onPaused() {
+        }
+
+        @Override
+        public void onPlaying() {
+
+        }
+
+        @Override
+        public void onSeekTo(int arg0) {
+        }
+
+        @Override
+        public void onStopped() {
+        }
+
+    };
+
+    private PlayerStateChangeListener playerStateChangeListener = new PlayerStateChangeListener() {
+
+        @Override
+        public void onAdStarted() {
+        }
+
+        @Override
+        public void onError(ErrorReason arg0) {
+        }
+
+        @Override
+        public void onLoaded(String arg0) {
+        }
+
+        @Override
+        public void onLoading() {
+        }
+
+        @Override
+        public void onVideoEnded() {
+        }
+
+        @Override
+        public void onVideoStarted() {
+        }
+    };
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+       //getMenuInflater().inflate(R.menu.Menu_my_collection, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        // Compute the width of a carousel item based on the screen width and number of initial items.
+        final DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        final int imageWidth = (int) (displayMetrics.widthPixels / INITIAL_ITEMS_COUNT);
+
+        // Get the array of puppy resources
+        final TypedArray puppyResourcesTypedArray = getResources().obtainTypedArray(R.array.puppies_array);
+
+        // Populate the carousel with items
+        ImageView imageItem;
+        for (int i = 0 ; i < puppyResourcesTypedArray.length() ; ++i) {
+            // Create new ImageView
+            imageItem = new ImageView(this);
+
+            // Set the shadow background
+            imageItem.setBackgroundResource(R.drawable.shadow);
+
+            // Set the image view resource
+            imageItem.setImageResource(puppyResourcesTypedArray.getResourceId(i, -1));
+
+            // Set the size of the image view to the previously computed value
+            imageItem.setLayoutParams(new LinearLayout.LayoutParams(imageWidth, (int)(displayMetrics.heightPixels/INITIAL_ITEMS_COUNT)));
+            imageItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MyCollection.this, Pdf_activity.class));
+
+                }
+            });
+            /// Add image view to the carousel container
+            mCarouselContainer.addView(imageItem);
+        }
+    }
+
+
+    public void share(View view){
+
+       // startActivity(new Intent(MyCollection.this, Share_Activity.class));
+    	if (manager != null && channel != null) {
+
+            // Since this is the system wireless settings activity, it's
+            // not going to send us a result. We will be notified by
+            // WiFiDeviceBroadcastReceiver instead.
+
+            startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+        } else {
+            Log.e(TAG, "channel or manager is null");
+        }
+    	if (!isWifiP2pEnabled) {
+            Toast.makeText(MyCollection.this, "Wifi peer to peer is not enabled",
+                    Toast.LENGTH_SHORT).show();
+            
+        }
+    	manager.discoverPeers(channel, new WifiP2pManager.ActionListener() {
+
+            @Override
+            public void onSuccess() {
+                Toast.makeText(MyCollection.this, "Discovery Initiated",
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(int reasonCode) {
+                Toast.makeText(MyCollection.this, "Discovery Failed : " + reasonCode,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+   // @Override
+    public void showDetails(WifiP2pDevice device) {
+      //  DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
+        //        .findFragmentById(R.id.frag_detail);
+        //fragment.showDetails(device);
+
+    }
+    //@Override
+    public void connect(WifiP2pConfig config) {
+        manager.connect(channel, config, new ActionListener() {
+
+            @Override
+            public void onSuccess() {
+                // WiFiDirectBroadcastReceiver will notify us. Ignore for now.
+            }
+
+            @Override
+            public void onFailure(int reason) {
+                Toast.makeText(MyCollection.this, "Connect failed. Retry.",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+   // @Override
+    public void disconnect() {
+        //final DeviceDetailFragment fragment = (DeviceDetailFragment) getFragmentManager()
+          //    .findFragmentById(R.id.frag_detail);
+      // fragment.resetViews();
+        manager.removeGroup(channel, new ActionListener() {
+
+            @Override
+            public void onFailure(int reasonCode) {
+                Log.d(TAG, "Disconnect failed. Reason :" + reasonCode);
+            }
+
+            @Override
+            public void onSuccess() {
+                //fragment.getView().setVisibility(View.GONE);
+            }
+
+        });
+    }
+
+    @Override
+    public void onChannelDisconnected() {
+        // we will try once more
+        if (manager != null && !retryChannel) {
+            Toast.makeText(this, "Channel lost. Trying again", Toast.LENGTH_LONG).show();
+            resetData();
+            retryChannel = true;
+            manager.initialize(this, getMainLooper(), this);
+        } else {
+            Toast.makeText(this,
+                    "Severe! Channel is probably lost premanently. Try Disable/Re-Enable P2P.",
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+    
+  //  @Override
+    public void cancelDisconnect() {
+
+        /*
+         * A cancel abort request by user. Disconnect i.e. removeGroup if
+         * already connected. Else, request WifiP2pManager to abort the ongoing
+         * request
+         */
+        if (manager != null) {
+           // final DeviceListFragment fragment = (DeviceListFragment) getFragmentManager()
+             //       .findFragmentById(R.id.frag_list);
+            //if (fragment.getDevice() == null
+              //      || fragment.getDevice().status == WifiP2pDevice.CONNECTED) {
+               // disconnect();
+            //} else if (fragment.getDevice().status == WifiP2pDevice.AVAILABLE
+              //      || fragment.getDevice().status == WifiP2pDevice.INVITED) {
+
+                manager.cancelConnect(channel, new ActionListener() {
+
+                    @Override
+                    public void onSuccess() {
+                        Toast.makeText(MyCollection.this, "Aborting connection",
+                                Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFailure(int reasonCode) {
+                        Toast.makeText(MyCollection.this,
+                                "Connect abort request failed. Reason Code: " + reasonCode,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        }
+    //}
+    public void change(View view){
+
+        startActivity(new Intent(MyCollection.this, VideoActivity.class));
+
+    }
+
+
+
+
+
+}

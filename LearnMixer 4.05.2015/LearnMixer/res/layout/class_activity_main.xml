@@ -1,0 +1,389 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/del"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="bottom|left"
+                android:orientation="vertical" >
+
+        </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/topcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/del"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/img_friend1"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/usr1"
+            android:visibility="gone"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/img_friend2"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/usr2"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/img_friend3"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/usr3"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/img_friend4"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/usr4"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/img_friend5"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/usr5"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/addMore"
+            android:layout_width="70dp"
+            android:layout_height="89dp"
+         
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/addbtn"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bodylayout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottomlayout"
+        android:layout_below="@+id/topcontainer"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/foldercontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_folder1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_folder2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_folder3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_folder4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_folder5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_folder6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/folder"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/my_board_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/morelayout"
+            android:layout_width="60dp"
+            android:layout_height="245dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/gdrivebtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/slideshowbtn"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/gdrive" />
+
+            <Button
+                android:id="@+id/chromebtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/gdrivebtn"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/chrome" />
+
+            <Button
+                android:id="@+id/youtubebtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/chromebtn"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/youtube" />
+
+            <Button
+                android:id="@+id/slideshowbtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/morebtn"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/slideshow" />
+
+            <Button
+                android:id="@+id/morebtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/addbtn" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/topcontainer_b"
+            android:layout_width="match_parent"
+            android:layout_height="89dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+             <ImageView
+                 android:layout_width="70dp"
+                 android:layout_height="87dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginLeft="10dp"
+                 android:background="@drawable/me"
+                 android:contentDescription="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/img_friend_b1"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/usr1"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_friend_b2"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/usr2"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_friend_b3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/usr3"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_friend_b4"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/usr4"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_friend_b5"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/usr5"
+                android:contentDescription="@string/app_name"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_width="700dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topcontainer_b" >
+
+            <LinearLayout
+                android:id="@+id/foldercontainer_b"
+                android:layout_width="700dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/img_folder_b1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_folder_b2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_folder_b3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_folder_b4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_folder_b5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/img_folder_b6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/folder"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/deletebtn"
+        android:layout_width="18dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/del"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/delete"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

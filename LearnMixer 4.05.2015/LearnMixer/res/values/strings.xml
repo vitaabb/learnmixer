@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Learnmixer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_collection">MyCollection</string>
+    <string name="title_activity_share_">Share_Activity</string>
+    <string name="text1">"In the same way as we draw lines on a map or plan, imaginary lines are drawn on the earth. Exactly halfway between the north and south poles, we find the EQUATOR. The equator is called the 0° line of latitude, and runs from east to west. Parallel to the 0° line of latitude, we also find a 90°N and a 90°S line of latitude at the two poles.
+The equator divides the globe into two halves. The upper half is called the NORTHERN HEMISPHERE and the lower one the SOUTHERN HEMISPHERE."</string>
+    <string name="text2">"A few important facts:
+The best known is the Greenwich meridian (0° line of longitude).
+From Greenwich (0°) the lines of longitude are numbered to the east up to 180°.
+This forms the Eastern Hemisphere.
+From Greenwich (0°) the lines of longitude are also numbered to the west up to 180°.
+This forms the Western Hemisphere.
+Lines of longitude meet at the poles and are all the same length.
+At the equator the lines of longitude are furthest from each other.
+When the location of a place is indicated, the longitude is always mentioned second."</string>
+    <string name="request">Please Change a Friend or Group to share</string>
+    <string name="title_activity_pdf_activity">pdf_activity</string>
+    <string name="title_activity_video">VideoActivity</string>
+
+    <color name="my_board_color">#3377ff</color>
+
+    <string name="title_activity_share_list">ShareList</string>
+
+</resources>

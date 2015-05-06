@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="done">#D9D9DB</color>
+    <color name="actionbar">#513252</color>
+    <color name="red">#c90000</color>
+    <color name="yellowapp">#d5e13f</color>
+    <color name="chatboxcontainer">#b5b5b5</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0645AD</color>
+    <color name="grey">#cccccc</color>
+    <color name="hint_color">#808080</color>
+    <color name="signinscreenfont">#464646</color>
+    <color name="olive">#808000</color>
+    <color name="profilebanner">#f9ddfa</color>
+    <color name="bright_foreground_material_dark">#f9ddfa</color>
+    <color name="dark_green">#092a56</color>
+    <color name="heading_color">#f0f0f0</color>
+    <color name="field_color">#020b4d</color>
+    <color name="value_color">#464646</color>
+    <color name="trans">#00000000</color>
+    <color name="light_black">#4f6c90</color>
+    <color name="navy_blue">#000080 </color>
+    <color name="pop_up">#020b4d </color>
+    <color name="setting_heading">#00585a </color>
+    <color name="edit_text">#020b4d </color>
+    <color name="hding_clor">#b60000</color>
+    <color name="hint_clor">#8ea2ba </color>
+    <color name="richirich">#976b00 </color>
+    <color name="superman">#c20000 </color>
+    <color name="sneakers">#000000 </color>
+    <color name="vip">#020b4d </color>
+    <color name="moderator">#04127b </color>
+    <color name="bossoftopic">#020b4d </color>
+    <color name="richiman">#976b00 </color>
+    <color name="chatter">#020b4d </color>
+    <color name="newColor">#00585a </color>
+    <color name="gradient_start">#d5e13f </color>
+    <color name="gradient_middle">#d5e13f </color>
+    <color name="gradient_end">#d5e13f </color>
+
+</resources>
